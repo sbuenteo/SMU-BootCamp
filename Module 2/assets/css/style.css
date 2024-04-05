@@ -15,7 +15,6 @@ body{
     height: 100vh;
     background-image: url(/assets/images/MainPagePic.png);
     background-size: contain;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
-    mix-blend-mode: multiply;
-}
+} 
