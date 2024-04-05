@@ -19,6 +19,7 @@ body{
     background-repeat: no-repeat;
 } 
 
+/* Navigation Bar and Hover effect */
 .navbar {
     padding: 10px 5%;
 }
@@ -53,3 +54,5 @@ nav ul li a::after{
 a:hover::after {
     width: 0;
 }
+
+/*Intro Text Paragraph*/
