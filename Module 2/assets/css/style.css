@@ -124,10 +124,13 @@ a:hover::after {
     margin-top: 40px;
 }
 
+/*Skill and Experience*/
+
 .tab-titles {
     display: flex;
     margin: 20px 0 40px;
 }
+
 .tab-links {
     margin-right: 50px;
     font-size: 20px;
@@ -149,4 +152,22 @@ a:hover::after {
 
 .tab-links.active-link::after {
     width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents ul li span {
+    color: orange;
+    font-size: 15px;
+}
+
+.tab-links:hover + .tab-contents{
+    display: block;
 }
