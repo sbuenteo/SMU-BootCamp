@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Inter Tight", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/assets/images/PortfolioBackground.png);
+    color: whitesmoke;
+    padding: 10px 2%;
+}
+
+header img {
+    position: absolute;
+    top: 4rem;
+    right: 0%;
+    width: 40%;
+    height: auto;
+}
+
+/* Navigation Bar and Hover effect */
+nav {
+    overflow: hidden;
+}
+
+label.logo {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: .3rem;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: whitesmoke;
+    font-size: 20px;
+    padding: 5px 13px;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+nav ul li::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 2px;
+    background: orange;
+    position: relative;
+    top: -1.5rem;
+    margin-left: 12px;
+}
+
+a.active,
+a:hover {
+    transition: .5s;
+}
+
+/* Hamburger Icon */
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 905px) {
+    .checkbtn {
+        display: block;
+    }
+
+    header img {
+        display: none;
+    }
+
+    nav ul {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: grey;
+        top: 50px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s ease;
+        letter-spacing: 3px;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        font-size: 22px;
+    }
+
+    nav ul li::after {
+        display: none;
+    }
+
+    a:hover{
+        background: none;
+        color: orange;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    #check:checked ~ .checkbtn i:before {
+        content: '\f00d';
+    }
+
+}
+
+
+/*Intro Text Paragraph*/
+
+.intro-text {
+    margin-top: 30%;
+    font-size: 20px;
+}
+
+.intro-text h1 {
+    font-size: 40px;
+    margin-top: 15px;
+}
+
+.intro-text h1 span {
+    color: orange;
+}
+
+/*Animation of Job Titel*/
+
+.intro-text .typed {
+    overflow: hidden;
+    text-decoration: underline;
+    text-decoration-color: orange;
+    margin: auto;
+    white-space: nowrap;
+    width: 0;
+    animation: typing;
+    animation-duration: 3s;
+    animation-timing-function: step(30, end);
+    animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/*About Me Page*/
+#about-me {
+    padding: 80px 0;
+    color: whitesmoke;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15%;
+    mix-blend-mode: difference;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.about-title {
+    font-size: 55px;
+    font-weight: 575;
+    color: orange;
+    margin-top: 40px;
+}
+
+/*Skill and Experience*/
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 4px;
+    background: orange;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents ul li span {
+    color: orange;
+    font-size: 15px;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/*My Project Page*/
+
+.myproject-title {
+    padding: 50px 0;
+    font-size: 55px;
+    font-weight: 575;
+    color: orange;
+}
+
+.projectlist {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project img {
+    width: 350px;
+    height: auto;
+    max-width: 100%;
+    padding: 30px;
+    transition: .5s;  /*Animate Image*/
+}
+
+.project img:hover {
+    transform: scale(1.1);  /*Make Image larger*/
+}
+
+.title {
+    font-size: 20px;
+    letter-spacing: 2px;
+    position: relative;
+    text-align: center;
+    color: orange;
+}
+
+address p, a {
+    display: inline-block;
+    position: relative;
+    justify-content: space-evenly;
+    padding-inline: 75px;
+    color: whitesmoke;
+    letter-spacing: 3px;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sonny's Personal Portfolio</title>
+        <script src="https://kit.fontawesome.com/3e36261668.js"
+            crossorigin="anonymous"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+    <body>
+
+        <!--Navigation Bar and Intro-->
+
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Sonny Buenteo</label>
+            <ul>
+                <li><a class="active" href="#header">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#myprojects">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <div class="intro-text">
+                <p class="typed">Junior Full Stack Developer</p>
+                <h1>Hello, I'm <span>Sonny</span><br>an aspiring Full Stack
+                    Developer</h1>
+            </div>
+            <div class="landing-img">
+                <img src="/assets/images/MainPagePic.png" alt="MainPagePic">
+            </div>
+        </header>
+
+        <!--About Me Page-->
+        <div id="about-me">
+            <div class="about-me-page">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/AboutMe.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="about-title">About me</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Odio dolore repellendus, consequuntur placeat
+                            blanditiis voluptatum dicta illum corrupti unde non,
+                            deleniti at nisi architecto quas eum vel officiis
+                            eaque sed. Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Mollitia ipsam rem, iure accusamus
+                            dolor amet ea vel enim doloremque laborum
+                            exercitationem cum minima sit odit sint. Velit,
+                            possimus facilis? Illum.</p>
+
+            <!--About Me Skills and Experience-->
+                        <div class="tab-titles">
+                            <p class="tab-links active-link"
+                                onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links"
+                                onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links"
+                                onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Designing
+                                    Web Applications</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Collin College</span><br>Web
+                                        Development and Computer Programming
+                                        Course - <span>2021 - 2022</span></li>
+                                <li><span>Southern Methodist
+                                            University</span><br>Full Stack
+                                        Coding Boot Camp -
+                                        <span>2024</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+            </div>                  
+            <!--Projects-->
+            <div id="myprojects">
+                <div class="myprojects-page">
+                    <h1 class="myproject-title">My Projects</h1>
+                    <div class="projectlist">
+                        <div class="project">
+                            <div class="title">Calculator</div>
+                            <img src="/assets/images/calculatorapp.jpg"
+                                alt="calc-app">
+                        </div>
+                        <div class="project">
+                            <div class="title">Countdown Time</div>
+                            <img src="/assets/images/Countdown timer.webp"
+                                alt="countdowntimer">
+                        </div>
+                        <div class="project">
+                            <div class="title">Tic Tac Toe</div>
+                            <img src="/assets/images/Tic Tac Toe App.png"
+                                alt="TicTacToe">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer id="contact">
+            <address>
+                <p>Contact the author of this page:</p>
+                <a href="sonny.buenteo@gmail.com">Email: sonny.buenteo@gmail.com</a>
+                <a href="tel:+17606374016">Mobile: +1 (760) 637-4016</a>
+            </address>
+        </footer>
+    
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+    </body>
+</html>
