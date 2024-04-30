@@ -1,59 +1,139 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Inter Tight", sans-serif;
     box-sizing: border-box;
 }
 
-body{   
+body {
     background-image: url(/assets/images/PortfolioBackground.png);
     color: whitesmoke;
+    padding: 10px 2%;
 }
 
-#header {
-    width: 100%;
-    height: 110vh;
-    background-image: url(/assets/images/MainPagePic.png);
-    background-size: contain;
-    background-position:right;
-    background-repeat: no-repeat;
-} 
+header img {
+    position: absolute;
+    top: 4rem;
+    right: 0%;
+    width: 40%;
+    height: auto;
+}
 
 /* Navigation Bar and Hover effect */
-.navbar {
-    padding: 10px 5%;
-}
-
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
+    overflow: hidden;
 }
 
-nav ul li { 
+label.logo {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: .3rem;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
     display: inline-block;
-    list-style: none;
-    margin: 10px 30px;
+    line-height: 80px;
+    margin: 0 5px;
 }
 
 nav ul li a {
     color: whitesmoke;
-    text-decoration: none;
     font-size: 20px;
+    padding: 5px 13px;
 }
 
-nav ul li a::after{ 
+nav ul li a:hover {
+    color: orange;
+}
+
+nav ul li::after {
     content: '';
-    height: 1px;
-    background: orange;
     display: block;
-    margin: auto;
+    width: 50%;
+    height: 2px;
+    background: orange;
+    position: relative;
+    top: -1.5rem;
+    margin-left: 12px;
 }
 
-a:hover::after {
-    width: 0;
+a.active,
+a:hover {
+    transition: .5s;
 }
+
+/* Hamburger Icon */
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 905px) {
+    .checkbtn {
+        display: block;
+    }
+
+    header img {
+        display: none;
+    }
+
+    nav ul {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: grey;
+        top: 50px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s ease;
+        letter-spacing: 3px;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        font-size: 22px;
+    }
+
+    nav ul li::after {
+        display: none;
+    }
+
+    a:hover{
+        background: none;
+        color: orange;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    #check:checked ~ .checkbtn i:before {
+        content: '\f00d';
+    }
+
+}
+
 
 /*Intro Text Paragraph*/
 
@@ -87,12 +167,17 @@ a:hover::after {
 }
 
 @keyframes typing {
-    from { width: 0}
-    to {width: 100%}
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }
 
 /*About Me Page*/
-#about-me{
+#about-me {
     padding: 80px 0;
     color: whitesmoke;
 }
@@ -179,5 +264,38 @@ a:hover::after {
     font-size: 55px;
     font-weight: 575;
     color: orange;
-    margin-top: 40px;
+}
+
+.projectlist {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project img {
+    width: 350px;
+    height: auto;
+    max-width: 100%;
+    padding: 30px;
+    transition: .5s;  /*Animate Image*/
+}
+
+.project img:hover {
+    transform: scale(1.1);  /*Make Image larger*/
+}
+
+.title {
+    font-size: 20px;
+    letter-spacing: 2px;
+    position: relative;
+    text-align: center;
+    color: orange;
+}
+
+address p, a {
+    display: inline-block;
+    position: relative;
+    justify-content: space-evenly;
+    padding-inline: 75px;
+    color: whitesmoke;
+    letter-spacing: 3px;
 }
