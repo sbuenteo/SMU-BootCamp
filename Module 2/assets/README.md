@@ -10,8 +10,6 @@ Sonny Buenteo Junior Full Stack Developer is a website that shows who I am and w
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Getting Started
 
@@ -30,36 +28,8 @@ Provide step-by-step instructions to install the project dependencies and set up
 ```bash
 # Clone the repository
 git clone: https://github.com/sbuenteo/SMU-BootCamp.git
-cd [project folder]
-
-# Install dependencies
-npm install
-```
+cd Module 2
 
 ## Usage
 
-Explain how to use the website or any relevant information for users. This section may include:
-- How to start the development server
-- Example commands or scripts
-- Any important URLs or endpoints
-
-```bash
-# Start the development server
-npm start
-```
-
-## Contributing
-
-Provide guidelines for contributing to the project. Include information about:
-- How to report bugs
-- How to suggest enhancements or new features
-- Coding standards
-- Pull request process
-
-## License
-
-Specify the license under which the project is distributed. For example, MIT License, Apache License 2.0, etc.
-
----
-
-Feel free to customize this template according to your website's specific requirements and structure.
+Website page of my portfolio to find out my software development experience and review some projects I have completed.
