@@ -20,8 +20,7 @@ These instructions will help you get a copy of the project up and running on you
 ## Prerequisites
 
 List any software or tools required to run the project locally. For example:
-- Node.js
-- npm
+- Visual Studio Code
 - Git
 
 ## Installation
@@ -30,7 +29,7 @@ Provide step-by-step instructions to install the project dependencies and set up
 
 ```bash
 # Clone the repository
-git clone [repository URL]
+git clone:
 cd [project folder]
 
 # Install dependencies
