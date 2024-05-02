@@ -29,7 +29,7 @@ Provide step-by-step instructions to install the project dependencies and set up
 
 ```bash
 # Clone the repository
-git clone: 
+git clone: https://github.com/sbuenteo/SMU-BootCamp.git
 cd [project folder]
 
 # Install dependencies
